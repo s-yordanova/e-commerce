@@ -1,0 +1,34 @@
+.orderList{
+    flex: 4;
+}
+
+.orderStatusButton{
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+}
+
+.orderStatusButton.approved{
+    background-color: #e5faf2;
+    color: #3bb077;
+}
+
+.orderStatusButton.declined{
+    background-color: #fff0f1;
+    color: #d95087;
+}
+
+.orderStatusButton.pending{
+    background-color: #ebf1fe;
+    color: #2a7ade;
+}
+
+.orderListView{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: #3bb077;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
