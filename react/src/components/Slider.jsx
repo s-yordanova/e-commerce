@@ -84,13 +84,12 @@ const Button = styled.button`
 export const Slider = () => {
     const { t } = useTranslation();
     const [slideIndex, setSlideIndex] = useState(0);
-const handleClick = (direction) => {
-    if(direction === "left"){
-        setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2);
-    }
-    else{
-        setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0);
-    }
+    const handleClick = (direction) => {
+        if (direction === "left") {
+            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2);
+        } else {
+            setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0);
+        }
 };
 
     return (
@@ -117,5 +116,5 @@ const handleClick = (direction) => {
                 <ChevronRight/>
             </Arrow>
         </Container>
-    )
+    );
 }

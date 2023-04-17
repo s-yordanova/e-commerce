@@ -11,7 +11,6 @@ import { removeCart } from "../redux/cartRedux";
 import ListSearch from "./ListSearch";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-//import { removeCart } from "../redux/cartRedux";
 
 const Container = styled.div`
   height: 60px;
@@ -147,7 +146,7 @@ const Navbar = () => {
         <Left>
           <Language>
             <Select
-            defaultValue={language}
+              defaultValue={language}
               onChange={(e) => {
                 setLanguage(e.target.value);
                 localStorage.setItem("language", e.target.value);
@@ -163,40 +162,35 @@ const Navbar = () => {
                 placeholder="Search"
                 onChange={(e) => setQuery(e.target.value.toLowerCase())}
               />
-              <Search style={{ color: "gray", fontSize: 16 }} />
+              <Search style={{ color: "gray", fontSize: 16 }}/>
             </SearchContainer>
-            {<ListSearch data={data} query={query} />}
+            {<ListSearch data={data} query={query}/>}
           </ResultContainer>
         </Left>
         <Center>
           <StyledLink to="/">
-            {" "}
-            <Logo>Archer</Logo>{" "}
+            <Logo>Archer</Logo>
           </StyledLink>
         </Center>
         <Right>
           {user ? (
             <StyledLink to="/account">
-              {" "}
-              <MenuItem> {t("ПРОФИЛ")}</MenuItem>{" "}
+              <MenuItem> {t("ПРОФИЛ")}</MenuItem>
             </StyledLink>
           ) : null}
           {user ? (
             <StyledLink to="/" onClick={handleLogout}>
-              {" "}
-              <MenuItem>{t("ИЗХОД")} </MenuItem>{" "}
+              <MenuItem>{t("ИЗХОД")} </MenuItem>
             </StyledLink>
           ) : null}
           {!user ? (
             <StyledLink to="/register">
-              {" "}
-              <MenuItem>{t("РЕГИСТРАЦИЯ")}</MenuItem>{" "}
+              <MenuItem>{t("РЕГИСТРАЦИЯ")}</MenuItem>
             </StyledLink>
           ) : null}
           {!user ? (
             <StyledLink to="/login" onClick={handleReset}>
-              {" "}
-              <MenuItem>{t("ВХОД")}</MenuItem>{" "}
+              <MenuItem>{t("ВХОД")}</MenuItem>
             </StyledLink>
           ) : null}
           <StyledLink to="/cart">

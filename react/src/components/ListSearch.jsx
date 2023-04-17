@@ -39,7 +39,10 @@ const StyledLink = styled(Link)`
 const ListSearch = ({ data, query }) => {
     return (
       <Container>{data.map((item) => (
-            query && <StyledLink to= {`/product/${item._id}`}><DropDownItem> {item.title}</DropDownItem> </StyledLink>
+            query &&
+            <StyledLink to= {`/product/${item._id}`}>
+              <DropDownItem>{item.title}</DropDownItem>
+            </StyledLink>
           ))}
       </Container>
     );

@@ -86,7 +86,6 @@ const Details = styled.div`
 `;
 
 const ProductName = styled.span``;
-
 const ProductId = styled.span``;
 
 const ProductColor = styled.div`
@@ -126,7 +125,6 @@ const SummaryItem = styled.div`
 `;
 
 const SummaryItemText = styled.span``;
-
 const SummaryItemPrice = styled.span``;
 
 const Form = styled.form`
@@ -234,7 +232,7 @@ const Cart = () => {
   const [codeValue, setCodeValue] = useState(0);
   const { t } = useTranslation();
   const [prodInStock, setProdStock] = useState(true);
-  const  [productOutStock, setProductOut] = useState("");
+  const [productOutStock, setProductOut] = useState("");
 
   const onInputChange = (e) => {
     setInput((prev) => {

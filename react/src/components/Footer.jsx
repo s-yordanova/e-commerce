@@ -16,9 +16,7 @@ const Left = styled.div`
     padding: 20px;
 `;
 
-const Logo = styled.h1`
-
-`;
+const Logo = styled.h1``;
 
 const Desc = styled.p`
     margin: 20px 0px;
@@ -26,7 +24,6 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
     display: flex;
-    
 `;
 
 const SocialIcon = styled.div`
@@ -95,7 +92,9 @@ const Footer = () => {
     <Container>
         <Left>
             <Logo>Archer</Logo>
-            <Desc>{t("Повече от 20 години на модния пазар! Качество, цена, отношение! Уцели право в десетката с нашите модни предложения!")} </Desc>
+            <Desc>
+                {t("Повече от 20 години на модния пазар! Качество, цена, отношение! Уцели право в десетката с нашите модни предложения!")}
+            </Desc>
             <SocialContainer>
                 <SocialIcon color = "3B5999">
                     <Facebook/>
@@ -112,30 +111,54 @@ const Footer = () => {
             </SocialContainer>
         </Left>
         <Center>
-            <Title> {t("Полезни линкове")} </Title>
+            <Title>
+                {t("Полезни линкове")}
+            </Title>
             <List>
-                <ListItem> {t("Начало")} </ListItem>
-                <ListItem> {t("Количка")} </ListItem>
-                <ListItem> {t("Мъжка мода")} </ListItem>
-                <ListItem> {t("Дамска мода")} </ListItem>
-                <ListItem> {t("Намаления")} </ListItem>
-                <ListItem> {t("Профил")} </ListItem>
-                <ListItem><StyledLink to="/shipping"> {t("Доставка")} </StyledLink></ListItem>
-                <ListItem><StyledLink to="/conditions"> {t("Условия")} </StyledLink></ListItem>
+                <ListItem>
+                    {t("Начало")}
+                </ListItem>
+                <ListItem>
+                    {t("Количка")}
+                </ListItem>
+                <ListItem> 
+                    {t("Мъжка мода")}
+                </ListItem>
+                <ListItem> 
+                    {t("Дамска мода")}
+                </ListItem>
+                <ListItem> 
+                    {t("Намаления")}
+                </ListItem>
+                <ListItem> 
+                    {t("Профил")}
+                </ListItem>
+                <ListItem>
+                    <StyledLink to="/shipping">
+                        {t("Доставка")}
+                    </StyledLink>
+                </ListItem>
+                <ListItem>
+                    <StyledLink to="/conditions">
+                        {t("Условия")}
+                    </StyledLink>
+                </ListItem>
             </List>
         </Center>
         <Right>
-            <Title>{t("Контакти")}</Title>
+            <Title>
+                {t("Контакти")}
+            </Title>
             <ContactItem>
-                 <Phone style = {{marginRight: "10px"}} /> +359 895 816 753
+                 <Phone style = {{marginRight: "10px"}}/>+359 895 816 753
             </ContactItem>
             <ContactItem> 
-                <MailOutline style = {{marginRight: "10px"}} /> archer@gmail.com
+                <MailOutline style = {{marginRight: "10px"}}/>archer@gmail.com
             </ContactItem>
             <Payment src= "https://i.ibb.co/Qfvn4z6/payment.png"/>
         </Right>
     </Container>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

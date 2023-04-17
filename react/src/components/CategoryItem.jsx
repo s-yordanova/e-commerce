@@ -11,7 +11,7 @@ const DropDownContent = styled.div`
   background-color: #fbfbfb;
   min-width: 160px;
   z-index: 9999;
-  a:link{
+  a:link {
     text-decoration: none;
   }
 `;

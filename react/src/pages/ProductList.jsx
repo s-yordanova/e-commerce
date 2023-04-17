@@ -11,7 +11,6 @@ import { useState } from "react"
 import RelatedProducts from "../components/RelatedProducts"
 import { useTranslation } from "react-i18next"
 
-
 const Container = styled.div`
 
 `;
@@ -101,7 +100,7 @@ const ProductList = () => {
        <Newsletter/>
        <Footer/>
    </Container>
-  )
+  );
 }
 
-export default ProductList
+export default ProductList;

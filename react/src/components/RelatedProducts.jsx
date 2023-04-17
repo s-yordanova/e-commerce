@@ -46,7 +46,7 @@ const RelatedProducts = ({ product, cat }) => {
   return (
     <Container>
       {filteredProducts.map((item) => (
-        <Product item={item} key={item.id} />
+        <Product item={item} key={item.id}/>
       ))}
     </Container>
   );

@@ -42,13 +42,7 @@ const ItemContainer = styled.div`
   }
 `;
 
-const Circle = styled.div`
-  /* width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;*/
-`;
+const Circle = styled.div``;
 
 const Image = styled.img`
   width: 100%;
@@ -130,7 +124,10 @@ const Product = ({ item }) => {
           <Title>{item.title}</Title>
           <PriceContainer>
           <Price sale={item.onSale}> {item.onSale ? item.price * 2 : item.price} BGN</Price>
-        {item.onSale && <PriceSale sale={item.onSale}>{item.price} BGN </PriceSale>}
+        {item.onSale &&
+          <PriceSale sale={item.onSale}>
+            {item.price} BGN 
+          </PriceSale>}
         </PriceContainer>
       </DescContainer>
     </Container>

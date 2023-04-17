@@ -95,22 +95,22 @@ const Login = () => {
 
   return (
     <Container>
-    <Wrapper>
-        <Title>{t("ВХОД")}</Title>
-        <Form>
-            <Input placeholder = {t("потребителско име")} 
-            onChange={ (e) => setUserName(e.target.value) }/>
-            <Input placeholder = {t("парола")}
-            type = "password"
-            onChange={ (e) => setPassword(e.target.value) }/>
-            <Button onClick={handleLogin} disabled={isFetching}>{t("ВХОД")}</Button>
-            {error && <Error>{t("Невалидни данни..")}</Error>}
-            <StyledLink to="/" >{t("ЗАБРАВЕНА ПАРОЛА?")}</StyledLink>
-            <StyledLink to="/register" onClick={resetFailSuc}>{t("СЪЗДАЙ НОВ ПРОФИЛ?")}</StyledLink>
-        </Form>
-    </Wrapper>
-</Container>
-  )
+        <Wrapper>
+            <Title>{t("ВХОД")}</Title>
+            <Form>
+                <Input placeholder = {t("потребителско име")} 
+                onChange={ (e) => setUserName(e.target.value) }/>
+                <Input placeholder = {t("парола")}
+                type = "password"
+                onChange={ (e) => setPassword(e.target.value) }/>
+                <Button onClick={handleLogin} disabled={isFetching}>{t("ВХОД")}</Button>
+                {error && <Error>{t("Невалидни данни..")}</Error>}
+                <StyledLink to="/" >{t("ЗАБРАВЕНА ПАРОЛА?")}</StyledLink>
+                <StyledLink to="/register" onClick={resetFailSuc}>{t("СЪЗДАЙ НОВ ПРОФИЛ?")}</StyledLink>
+            </Form>
+        </Wrapper>
+    </Container>
+  );
 }
 
-export default Login
+export default Login;

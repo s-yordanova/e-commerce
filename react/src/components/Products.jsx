@@ -17,16 +17,15 @@ const Products = ({mainCat,cat,filters,sort}) => {
   useEffect(()=>{
     const getProducts = async () => {
       try{
-        const res = await axios.get(cat ? `http://localhost:5000/api/products/${mainCat}/?category[]=${cat}&category[]=${mainCat}` 
-        : "http://localhost:5000/api/products/p" );
+        const res = await axios.get(cat ?
+          `http://localhost:5000/api/products/${mainCat}/?category[]=${cat}&category[]=${mainCat}` :
+          "http://localhost:5000/api/products/p" );
         setProducts(
           res.data.filter((item) => {
             return item.inStock && item.quantity > 0;
           })
         );
-      }catch(err){
-
-      }
+      }catch(err){}
     };
     getProducts();
   },[mainCat,cat]);
@@ -35,7 +34,7 @@ const Products = ({mainCat,cat,filters,sort}) => {
   useEffect(() => {
     cat && setFilteredProducts(
       products.filter(item => 
-        Object.entries(filters).every(([key,value])=>
+        Object.entries(filters).every(([key,value]) =>
           item[key].includes(value)
         )
       )
@@ -66,8 +65,7 @@ const Products = ({mainCat,cat,filters,sort}) => {
           <Product item = {item} key = {item._id}/>
       ))}
     </Container>
-  )
+  );
 }
 
-export default Products
-
+export default Products;
