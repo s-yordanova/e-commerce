@@ -1,0 +1,62 @@
+  .newUser {
+    flex: 4;
+    padding: 0 20px;
+  }
+  
+  .newUserForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .newUserTitle{
+    margin-bottom: 20px;
+  }
+
+  .userFormLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.userFormLeft>label{
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.userFormLeft>input{
+  height: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+  
+.productFormRight{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.newUserButton{
+      width: 200px;
+      border: none;
+      background-color: teal;
+      color: white;
+      padding: 7px 10px;
+      font-weight: 600;
+      border-radius: 10px;
+      margin-top: 30px;
+      cursor: pointer;
+}
+
+  .userUpload{
+    display: flex;
+    align-items: center;
+}
+
+.userUploadImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}

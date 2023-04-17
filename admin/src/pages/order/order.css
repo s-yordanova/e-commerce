@@ -1,0 +1,53 @@
+.orderContainer{
+    flex: 4;
+    padding: 0 20px;
+}
+
+.orderTitleContainer{
+    margin: 20px 0;
+}
+
+.view{
+    display: flex;
+}
+
+.orderViewContainer{
+    flex: 1;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    margin-right: 20px;
+}
+.infoContainer{
+    padding: 10px 0;
+}
+
+label{
+    margin: 10px 5px 10px 0 ;
+    color: gray;
+}
+
+.productsInfo{
+    flex: 3;
+}
+
+.updateOrder{
+    width: 120px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.success{
+    color: green;
+    margin-top: 10px;
+}
+
+.error{
+    color: red;
+    margin-top: 10px;
+}
